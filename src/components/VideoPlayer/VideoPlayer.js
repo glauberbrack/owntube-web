@@ -2,7 +2,9 @@ import React from 'react'
 
 const VideoPlayer = (...props) => {
     return (
-        <div><h1>VideoPlayer</h1></div>
+        <div className='video-player'>
+            <h1>VideoPlayer</h1>
+        </div>
     )
 }
 
