@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Segment, Input } from 'semantic-ui-react';
 
+
 class SearchBar extends Component{
 
     handleSearch = e => {
