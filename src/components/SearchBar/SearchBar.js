@@ -6,6 +6,11 @@ import { searchVideo } from '../../store/actions/search-video'
 
 class SearchBar extends Component{
 
+    constructor(props) {
+        super(props)
+        this.props.searchVideo('Redux')
+    }
+
     handleSearch = e => {
         const search = e.target.value
 

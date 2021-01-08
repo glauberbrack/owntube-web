@@ -14,7 +14,6 @@
 
 .video-player {
   grid-area: video-player;
-  background: blue;
 }
 
 .video-list {
@@ -24,4 +23,22 @@
 
 .item:hover {
   background: #e0e0e0;
+  cursor: pointer;
+}
+
+.video-title {
+  font-weight: 400;
+  font-weight: 600;
+  color: #4682B4;
+  padding: 10px;
+}
+
+.video-description {
+  padding: 10px;
+  color: #0000CD;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
