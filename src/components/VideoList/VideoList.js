@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { List, Image } from 'semantic-ui-react';
+import { List, Image, Dimmer, Loader } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
 class VideoList extends Component {
     renderVideo (video) {
         const title = video?.snippet?.title
         return (
-            <List verticalAlign='middle'>
+            <List key={video?.id.videoId} verticalAlign='middle'>
                 <List.Item>
                     <Image width='100px' height='80px' src={video?.snippet?.thumbnails?.default?.url} />
                     
@@ -19,7 +19,13 @@ class VideoList extends Component {
     }
     render() {
         return (
+            
             <div className='video-list'>
+                {
+                this.props.loading && ( <Dimmer active>
+                    <Loader size='medium'> Loading... </Loader>
+                </Dimmer>)
+                }
                 {this.props.videos.map(video => {
                     return this.renderVideo(video)
                 })}
