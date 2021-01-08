@@ -1,5 +1,6 @@
 .container {
   display: grid;
+  margin: 100px 150px 0 150px;
   grid-template-areas: 
   'search-bar search-bar search-bar search-bar'
   'video-player video-player video-player video-list'
@@ -8,7 +9,6 @@
 
 .search-bar {
   grid-area: search-bar;
-  background: red;
 }
 
 .video-player {
@@ -18,5 +18,8 @@
 
 .video-list {
   grid-area: video-list;
-  background: purple;
+}
+
+.item:hover {
+  background: #e0e0e0;
 }
